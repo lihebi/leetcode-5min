@@ -6,13 +6,18 @@
   "background": {
     "scripts": ["background.js"]
   },
-  "browser_action": {},
+  "browser_action": {
+    "default_popup": "index.html"
+  },
   "content_scripts": [
     {
       "matches": ["https://leetcode.com/*"],
       "js": ["/static/js/content.js"]
     }
   ],
-  "content_security_policy": "script-src 'self' 'sha256-7z1mon01iwEzRrkcYfOceY2mpRof1U/S3cFAk7h6blE='; object-src 'self'",
+  // "content_security_policy": "script-src 'sha256-zXNbWh3u3Quu5tefTdxFHaquTr4KwNbiQ/GHEQ6TpP8='; object-src 'self'",
+  // "content_security_policy": "script-src 'self' 'sha256-7z1mon01iwEzRrkcYfOceY2mpRof1U/S3cFAk7h6blE='; object-src 'self'",
+  // "content_security_policy": "script-src 'self'; object-src 'self'",
+  // "content_security_policy": "script-src 'unsafe-inline'; object-src 'self'",
   "permissions": ["storage", "activeTab"]
 }
