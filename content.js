@@ -1,10 +1,6 @@
 console.log("content");
 console.log(document.title);
 console.log(document.URL);
-// mydiv = document.createElement("div");
-// mydiv.id = "lt-master";
-// mydiv.appendChild(document.createTextNode("Leetcode Master"));
-// document.getElementById("app").prepend(mydiv);
 
 // chrome.runtime.onInstalled.addListener(function () {
 //   console.log("111");
@@ -28,3 +24,17 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     });
   }
 });
+
+b = document.getElementsByTagName("body")[0];
+mydiv = document.createElement("div");
+mydiv.id = "kuberletes";
+mydiv.appendChild(document.createTextNode("kuberLetes"));
+// document.getElementById("app").prepend(mydiv);
+b.prepend(mydiv);
+
+// put information into mydiv
+//
+// But I don't want to use js to manipulate DOM. Can I use react here?
+//
+// - render react into content script: https://itnext.io/create-chrome-extension-with-reactjs-using-inject-page-strategy-137650de1f39
+// - use iframe: https://github.com/ryanseddon/react-frame-component
