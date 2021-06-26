@@ -8,6 +8,12 @@ This is a leetcode scheduler and progress tracker. The core features include:
 - dashboard showing statistics of past submissions
 - space repetition algorithm based scheduler
 
+## Known Issues
+
+- I have to use manifest v2, because v3's security policy does not seem to allow
+  react's way of loading scripts.
+- In manifest v3, the background.js has to be in top-level
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
